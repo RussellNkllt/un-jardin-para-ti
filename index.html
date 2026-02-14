@@ -79,7 +79,7 @@
 
         .sunflower {
             position: absolute;
-            top: 55%; 
+            top: -80%; 
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -198,7 +198,7 @@
             const container = document.createElement('div');
             container.className = 'sunflower';
             container.style.left = x + '%';
-            container.style.top = (55 + verticalOffset) + '%';
+            container.style.top = (80 + verticalOffset) + '%';
             container.style.transform = `translate(-50%, -50%) scale(${scale})`;
             
             container.onclick = () => {
@@ -263,6 +263,10 @@
             }
             setInterval(createHeart, 400);
             showVerso("Toca los girasoles para descubrir mi mensaje...");
+			
+			if (document.documentElement.requestFullscreen) {
+                document.documentElement.requestFullscreen();
+            }
         });
     </script>
 </body>
